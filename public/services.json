@@ -1,109 +1,69 @@
-{
-    "services": [
+ [
       {
         "service_id": 1,
         "service_name": "Food Distribution",
-        "description": "We provide nutritious meals to those in need through our food distribution program.",
-        "price": 100,
-        "total_donation": 7500,
-        "donation_area": {
-          "area_name": "Hunger Relief",
-          "place_name": "Local Communities in Africa"
-        },
-        "donation_type": "Monetary or Food",
-        "image_url": "https://example.com/educational_support_image.jpg"
+        "price": 50,
+        "area": "Hunger Relief",
+        "location": "Local Communities in Africa",
+        "image_url": "https://i.ibb.co/Cb52vMb/joel-muniz-Blnp-Elo7cl-E-unsplash.jpg",
+        "description": "Our Food Distribution program is dedicated to alleviating hunger and ensuring access to nutritious meals for vulnerable individuals and families in local communities across Africa. We recognize that hunger is a pressing issue, and we are committed to making a positive impact on the lives of those facing food insecurity. [Description continues...]",
+        "donation_goal": 10000,
+        "total_donation": 7500
       },
       {
         "service_id": 2,
         "service_name": "Educational Support",
-        "description": "We offer educational resources, tutoring, and scholarships to underprivileged children.",
-        "price": 50,
-        "total_donation": 3500,
-        "donation_area": {
-          "area_name": "Education",
-          "place_name": "Schools in Asia"
-        },
-        "donation_type": "Monetary",
-        "image_url": "https://example.com/educational_support_image.jpg"
+        "price": 40,
+        "area": "Education",
+        "location": "Schools in Asia",
+        "image_url": "https://i.ibb.co/6g7CPCb/mario-heller-h-XLk-Fpv-KRys-unsplash.jpg",
+        "description": "Our Educational Support initiative is committed to breaking down barriers to education and empowering underprivileged children with knowledge. In schools across Asia, many bright minds face challenges in accessing quality education due to financial constraints, lack of resources, or social disparities. We believe that education is the key to a brighter future and is essential for personal and community development. [Description continues...]",
+        "donation_goal": 8000,
+        "total_donation": 3500
       },
       {
         "service_id": 3,
         "service_name": "Medical Assistance",
-        "description": "Our medical assistance program covers basic healthcare needs for disadvantaged individuals.",
         "price": 60,
-        "total_donation": 6000,
-        "donation_area": {
-          "area_name": "Healthcare",
-          "place_name": "Hospitals in South America"
-        },
-        "donation_type": "Monetary",
-        "image_url": "https://example.com/educational_support_image.jpg"
+        "area": "Healthcare",
+        "location": "Hospitals in South America",
+        "image_url": "https://i.ibb.co/QNC74jW/MSF163911-High-0.jpg",
+        "description": "Our Medical Assistance program is dedicated to providing essential healthcare services to disadvantaged individuals and families in hospitals and clinics across South America. We understand that access to healthcare is a fundamental right, and we are committed to ensuring that quality medical care is accessible to all, regardless of their socioeconomic status. [Description continues...]",
+        "donation_goal": 12000,
+        "total_donation": 6000
       },
       {
         "service_id": 4,
         "service_name": "Shelter for the Homeless",
-        "description": "We operate shelters and provide housing solutions for homeless individuals and families.",
-        "price": 80,
-        "total_donation": 4500,
-        "donation_area": {
-          "area_name": "Housing",
-          "place_name": "Shelters in Europe"
-        },
-        "donation_type": "Monetary or In-kind",
-        "image_url": "https://example.com/educational_support_image.jpg"
+        "price": 70,
+        "area": "Housing",
+        "location": "Shelters in Europe",
+        "image_url": "https://i.ibb.co/svKLcFX/ev-IWJH-l-vb4k-unsplash.jpg",
+        "description": "Our Shelter for the Homeless initiative aims to provide safe and secure housing solutions for individuals and families experiencing homelessness in shelters across Europe. We believe that every person deserves a place to call home, where they can rebuild their lives with dignity and hope. [Description continues...]",
+        "donation_goal": 9000,
+        "total_donation": 4500
       },
+
       {
         "service_id": 5,
-        "service_name": "Disaster Relief",
-        "description": "In times of natural disasters, we provide immediate relief and aid to affected communities.",
-        "price": 70,
-        "total_donation": 8000,
-        "donation_area": {
-          "area_name": "Emergency Relief",
-          "place_name": "Disaster-stricken Areas in Africa and Asia"
-        },
-        "donation_type": "Monetary or In-kind",
-        "image_url": "https://example.com/educational_support_image.jpg"
+        "service_name": "Clean Water Access",
+        "price": 35,
+        "area": "Water and Sanitation",
+        "location": "Rural Villages in Central America",
+        "image_url": "https://i.ibb.co/kcpTh2Q/water.jpg",
+        "description": "Our Clean Water Access program is dedicated to providing safe and reliable access to clean drinking water in rural villages across Central America. Access to clean water is a basic human right, yet many communities in this region face water scarcity and contamination issues. [Description continues...]",
+        "donation_goal": 10000,
+        "total_donation": 7800
       },
       {
         "service_id": 6,
-        "service_name": "Community Development",
-        "description": "We support sustainable community development projects to improve living conditions.",
-        "price": 90,
-        "total_donation": 5500,
-        "donation_area": {
-          "area_name": "Community Development",
-          "place_name": "Communities in Central America"
-        },
-        "donation_type": "Monetary",
-        "image_url": "https://example.com/educational_support_image.jpg"
-      },
-      {
-        "service_id": 7,
-        "service_name": "Counseling Services",
-        "description": "We offer counseling and mental health services to individuals and families in crisis.",
-        "price": 75,
-        "total_donation": 4200,
-        "donation_area": {
-          "area_name": "Mental Health",
-          "place_name": "Counseling Centers in Africa and South America"
-        },
-        "donation_type": "Monetary",
-        "image_url": "https://example.com/educational_support_image.jpg"
-      },
-      {
-        "service_id": 8,
-        "service_name": "Volunteer Opportunities",
-        "description": "Join us as a volunteer to make a difference in the lives of those in need.",
-        "price": 50,
-        "total_donation": 2800,
-        "donation_area": {
-          "area_name": "Volunteering",
-          "place_name": "Various Volunteer Projects Worldwide"
-        },
-        "donation_type": "Time and Effort",
-        "image_url": "https://example.com/educational_support_image.jpg"
+        "service_name": "Children's Healthcare",
+        "price": 55,
+        "area": "Healthcare",
+        "location": "Pediatric Hospitals in North America",
+        "image_url": "https://i.ibb.co/8YHbfRn/christian-bowen-I0-It-Pt-Is-VEE-unsplash.jpg",
+        "description": "Our Children's Healthcare program is dedicated to ensuring the well-being of young patients in pediatric hospitals across North America. Children facing serious illnesses and medical conditions deserve the best care and support. [Description continues...]",
+        "donation_goal": 9000,
+        "total_donation": 6200
       }
     ]
-  }
-  

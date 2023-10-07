@@ -8,8 +8,9 @@ const MainPage = () => {
   return (
         <div>
                 <div style={{
-        backgroundImage: `url(${bgimg})`,
-            backgroundSize:'cover'
+        // backgroundImage: `url(${bgimg})`,
+        //     backgroundSize:'cover'
+        background:'black'
     }}>
       <NavBar></NavBar>
       <Outlet></Outlet>

@@ -6,11 +6,11 @@ import bgimg from '../../assets/images/wave-haikei.svg'
 
 const MainPage = () => {
   return (
-        <div>
+        <div className=" bg-gray-100">
                 <div style={{
         // backgroundImage: `url(${bgimg})`,
         //     backgroundSize:'cover'
-        background:'black'
+        // background:'black'
     }}>
       <NavBar></NavBar>
       <Outlet></Outlet>

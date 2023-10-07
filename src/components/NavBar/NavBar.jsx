@@ -106,7 +106,7 @@ export default function NavBar() {
   );
 
   return (
-    <Navbar className=" min-w-full bg-black bg-opacity-60 rounded-none border-none">
+    <Navbar className=" min-w-full bg-black bg-opacity-100 rounded-none border-none">
       <div className="container mx-auto flex items-center justify-between ">
         {/* <Typography
           as="a"

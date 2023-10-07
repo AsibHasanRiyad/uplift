@@ -1,0 +1,109 @@
+{
+    "services": [
+      {
+        "service_id": 1,
+        "service_name": "Food Distribution",
+        "description": "We provide nutritious meals to those in need through our food distribution program.",
+        "price": 100,
+        "total_donation": 7500,
+        "donation_area": {
+          "area_name": "Hunger Relief",
+          "place_name": "Local Communities in Africa"
+        },
+        "donation_type": "Monetary or Food",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 2,
+        "service_name": "Educational Support",
+        "description": "We offer educational resources, tutoring, and scholarships to underprivileged children.",
+        "price": 50,
+        "total_donation": 3500,
+        "donation_area": {
+          "area_name": "Education",
+          "place_name": "Schools in Asia"
+        },
+        "donation_type": "Monetary",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 3,
+        "service_name": "Medical Assistance",
+        "description": "Our medical assistance program covers basic healthcare needs for disadvantaged individuals.",
+        "price": 60,
+        "total_donation": 6000,
+        "donation_area": {
+          "area_name": "Healthcare",
+          "place_name": "Hospitals in South America"
+        },
+        "donation_type": "Monetary",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 4,
+        "service_name": "Shelter for the Homeless",
+        "description": "We operate shelters and provide housing solutions for homeless individuals and families.",
+        "price": 80,
+        "total_donation": 4500,
+        "donation_area": {
+          "area_name": "Housing",
+          "place_name": "Shelters in Europe"
+        },
+        "donation_type": "Monetary or In-kind",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 5,
+        "service_name": "Disaster Relief",
+        "description": "In times of natural disasters, we provide immediate relief and aid to affected communities.",
+        "price": 70,
+        "total_donation": 8000,
+        "donation_area": {
+          "area_name": "Emergency Relief",
+          "place_name": "Disaster-stricken Areas in Africa and Asia"
+        },
+        "donation_type": "Monetary or In-kind",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 6,
+        "service_name": "Community Development",
+        "description": "We support sustainable community development projects to improve living conditions.",
+        "price": 90,
+        "total_donation": 5500,
+        "donation_area": {
+          "area_name": "Community Development",
+          "place_name": "Communities in Central America"
+        },
+        "donation_type": "Monetary",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 7,
+        "service_name": "Counseling Services",
+        "description": "We offer counseling and mental health services to individuals and families in crisis.",
+        "price": 75,
+        "total_donation": 4200,
+        "donation_area": {
+          "area_name": "Mental Health",
+          "place_name": "Counseling Centers in Africa and South America"
+        },
+        "donation_type": "Monetary",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      },
+      {
+        "service_id": 8,
+        "service_name": "Volunteer Opportunities",
+        "description": "Join us as a volunteer to make a difference in the lives of those in need.",
+        "price": 50,
+        "total_donation": 2800,
+        "donation_area": {
+          "area_name": "Volunteering",
+          "place_name": "Various Volunteer Projects Worldwide"
+        },
+        "donation_type": "Time and Effort",
+        "image_url": "https://example.com/educational_support_image.jpg"
+      }
+    ]
+  }
+  

@@ -78,7 +78,7 @@ export default function NavBar() {
         className="p-1 font-normal hover:text-[#3BCF92]"
       >
                 <NavLink
-          to="/messages"
+          to="/blog"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
@@ -94,12 +94,12 @@ export default function NavBar() {
         className="p-1 font-normal hover:text-[#3BCF92]"
       >
                 <NavLink
-          to="/messages"
+          to="/donate"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Contact Us
+          Donate
         </NavLink>
       </Typography>
     </ul>

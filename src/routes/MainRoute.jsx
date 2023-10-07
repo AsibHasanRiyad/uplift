@@ -5,6 +5,8 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import { Login } from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
+import Donate from "../pages/Donate/Donate";
+import Blog from "../pages/Blog/Blog";
 
 const MainRouter = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const MainRouter = createBrowserRouter([
         {
             path:'/services',
             element: <Services></Services>,
+        },
+        {
+            path:'/donate',
+            element: <Donate></Donate>
+        },
+        {
+            path:'/blog',
+            element: <Blog></Blog>
         },
     ]
   },

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SwiperSlider from "../../components/Swiper/SwiperSlider";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { EachCard } from "./EachCard";
+import Money from "../Money/Money";
 
 const AboutUs = () => {
   const [data, setData] = useState([]);
@@ -20,6 +21,19 @@ const AboutUs = () => {
           <span className=" text-[#3BCF92]">supports</span> good causes and
           positive change all over the world.
         </h1>
+        <div className="  px-4 mb-16 md:px-10 xl:px-32 pt-10">
+        <h1 className="text-2xl md:text-4xl text-start text-[#17174a] font-bold">
+          What We Do?
+        </h1>
+        <p className=" text-lg text-gray-800 my-4 text-justify">
+          Providing quality education opportunities to underprivileged children
+          and youth. Ending hunger and malnutrition in communities through
+          nutritious meals. Offering essential healthcare services to improve
+          well-being in underserved areas. Ensuring access to safe and clean
+          drinking water for those in need. Join us in making a difference
+          today.
+        </p>
+      </div>
         <div className=" grid grid-cols-1 gap-6 lg:gap-20 my-16 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto ">
           <div>
             <h1 className=" text-3xl text-[#17174a] font-bold mb-3">
@@ -85,19 +99,7 @@ const AboutUs = () => {
         ))}
       </div>
 
-      <div className="  px-4 mb-16 md:px-10 xl:px-36  pt-10">
-        <h1 className="text-3xl md:text-5xl text-start text-[#17174a] font-bold">
-          What We Do?
-        </h1>
-        <p className=" text-lg text-gray-800 my-4 text-justify">
-          Providing quality education opportunities to underprivileged children
-          and youth. Ending hunger and malnutrition in communities through
-          nutritious meals. Offering essential healthcare services to improve
-          well-being in underserved areas. Ensuring access to safe and clean
-          drinking water for those in need. Join us in making a difference
-          today.
-        </p>
-      </div>
+      <Money></Money>
     </div>
   );
 };

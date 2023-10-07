@@ -12,9 +12,9 @@ import { NavLink } from "react-router-dom";
 const Register = () => {
     return (
         <div>
-                <div className=" min-h-screen flex justify-center items-center ">
-      <Card className=" " color="transparent" shadow={false}>
-        <Typography variant="h4" color="white" className=" text-center">
+                <div className=" min-h-screen flex justify-center items-center">
+      <Card className=" px-10 py-16" color="white" shadow={false}>
+        <Typography variant="h4" color="black" className=" text-center">
           Sign Up With
         </Typography>
         <div className=" flex justify-between items-center gap-6 my-4">
@@ -104,7 +104,7 @@ const Register = () => {
             </svg>
           </div>
         </div>
-        <h1 className=" text-center text-white">Or</h1>
+        <h1 className=" text-center text-black">Or</h1>
         <form className="mt-8 mb-2 px-4 md:px-0 w-80 max-w-screen-lg sm:w-96">
           <div className="mb-4 flex flex-col gap-6 ">
             <div className=" flex flex-col md:flex-row gap-6 md:gap-3">

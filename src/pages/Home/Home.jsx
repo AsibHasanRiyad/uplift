@@ -1,6 +1,7 @@
 
 import Slider from "../../components/Slider/Slider";
 import SwiperSlider from "../../components/Swiper/SwiperSlider";
+import Money from "../Money/Money";
 import Services from "../Services/Services";
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
         </h1>
       <SwiperSlider></SwiperSlider>
       </div>
+      <Money></Money>
     </div>
   );
 };

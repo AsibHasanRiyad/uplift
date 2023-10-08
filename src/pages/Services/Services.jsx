@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Service from "./Service";
 import { Helmet } from "react-helmet-async";
+import { Spinner } from "@material-tailwind/react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -9,6 +11,12 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   });
+//   const {loading} = useContext(AuthContext)
+//   if (loading) {
+//     return <div className=" h-screen flex justify-center items-center">
+//         <Spinner className="h-12 w-12" />
+//     </div>
+// }
   return (
     <div className=" mx-4 lg:mx-20">
       <Helmet>

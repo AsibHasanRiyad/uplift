@@ -4,14 +4,38 @@ import Slider from "../../components/Slider/Slider";
 import SwiperSlider from "../../components/Swiper/SwiperSlider";
 import Money from "../Money/Money";
 import Services from "../Services/Services";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { Spinner } from "@material-tailwind/react";
+import { ToastContainer } from "react-toastify";
 
 const Home = () => {
+//   const {loading} = useContext(AuthContext)
+//   if (loading) {
+//     return <div className=" h-screen flex justify-center items-center">
+//         <Spinner className="h-12 w-12" />
+//     </div>
+// }
   return (
     <div className="">
       <Helmet>
         <title>Uplift | Home</title>
       </Helmet>
       <Slider></Slider>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
       {/* <div
         style={{
           backgroundImage: `url("https://i.ibb.co/N1LD1TT/larm-rmah-AEa-TUnvneik-unsplash.jpg")`,

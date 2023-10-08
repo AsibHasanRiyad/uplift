@@ -7,6 +7,8 @@ import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
 import Donate from "../pages/Donate/Donate";
 import Blog from "../pages/Blog/Blog";
+import PrivateRoute from "./PrivateRoute";
+import TestPage from "../pages/TestPage/TestPage";
 
 const MainRouter = createBrowserRouter([
   {
@@ -34,12 +36,16 @@ const MainRouter = createBrowserRouter([
             element: <Services></Services>,
         },
         {
+            path:'/test',
+            element: <TestPage></TestPage>,
+        },
+        {
             path:'/donate',
-            element: <Donate></Donate>
+            element: <PrivateRoute><Donate></Donate></PrivateRoute>
         },
         {
             path:'/blog',
-            element: <Blog></Blog>
+            element: <PrivateRoute><Blog></Blog></PrivateRoute>
         },
     ]
   },

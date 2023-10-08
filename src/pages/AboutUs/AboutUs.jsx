@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import SwiperSlider from "../../components/Swiper/SwiperSlider";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { EachCard } from "./EachCard";
 import Money from "../Money/Money";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../provider/AuthProvider";
+import { Spinner } from "@material-tailwind/react";
 
 const AboutUs = () => {
   const [data, setData] = useState([]);
@@ -12,6 +14,12 @@ const AboutUs = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   });
+  const {loading} = useContext(AuthContext)
+  if (loading) {
+    return <div className=" h-screen flex justify-center items-center">
+        <Spinner className="h-12 w-12" />
+    </div>
+}
   return (
     <div>
       <Helmet>

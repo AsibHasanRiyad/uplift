@@ -78,6 +78,21 @@ export default function NavBar() {
           Services
         </NavLink>
       </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="white"
+        className="p-1 font-normal hover:text-[#3BCF92]"
+      >
+        <NavLink
+          to="/test"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+        >
+          Test
+        </NavLink>
+      </Typography>
       <span className=" hidden lg:block">|</span>
       <Typography
         as="li"
@@ -126,7 +141,9 @@ export default function NavBar() {
         <img className=" w-32" src={logo} alt="" />
         <div className="hidden lg:block">{navList}</div>
         {user ? (
-            <Button
+            <div className=" flex justify-center items-center gap-2">
+              <h1 className=" text-3xl">{user.displayName}</h1>
+              <Button
               onClick={handelLogout}
               variant=""
               size=""
@@ -134,6 +151,7 @@ export default function NavBar() {
             >
               <span>Log Out</span>
             </Button>
+            </div>
         ) : (
           <NavLink to={"/login"}>
             <Button

@@ -33,6 +33,7 @@ const Register = () => {
     const form = new FormData(e.currentTarget);
     const firstName = form.get("firstName");
     const lastName = form.get("lastName");
+    const photoUrl = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
     setErrorMessage("");
@@ -57,10 +58,11 @@ const Register = () => {
       .then((result) => {
         updateProfile(result.user, {
           displayName: firstName,
+          photoURL:photoUrl
         });
-        toast('🦄 Wow so easy!', {
+        toast('Registration Successful', {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -94,7 +96,7 @@ const Register = () => {
       </Helmet>
       <div className=" min-h-screen flex justify-center items-center ">
         <Card
-          className=" md:px-10 md:py-16 rounded-none md:rounded-md"
+          className=" px-10 py-16 rounded-none md:rounded-md"
           color="white"
           shadow={false}
         >
@@ -183,21 +185,24 @@ const Register = () => {
           >
             <div className="mb-4 flex flex-col gap-6 mx-auto">
               <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input
+                <input
                   name="firstName"
                   type="text"
-                  className=" col-span-1"
+                  className=" col-span-1 rounded-lg"
                   label="First Name"
                   required
+                  placeholder='First Name'
                 />
-                <Input
+                <input
                   name="lastName"
                   type="text"
-                  className=" col-span-1 "
+                  className=" col-span-1 rounded-lg"
                   label="Last Name"
+                  placeholder='Last Name'
                   required
                 />
               </div>
+              <Input className='' name="photo" label="Photo URL" required />
               <Input name="email" type="email" label="Email" />
               <Input name="password" type="password" label="Password" />
             </div>

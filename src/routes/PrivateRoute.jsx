@@ -7,13 +7,13 @@ import { Spinner } from "@material-tailwind/react";
 
 const PrivateRoute = ({children}) => {
     const location = useLocation()
-    // console.log(location);
+    // console.log('Hello location',location);
     const {user, loading} = useContext(AuthContext)
-//     if (loading) {
-//       return <div className=" h-screen flex justify-center items-center">
-//           <Spinner className="h-12 w-12" />
-//       </div>
-//   }
+    if (loading) {
+      return <div className=" h-screen flex justify-center items-center">
+          <Spinner className="h-12 w-12" />
+      </div>
+  }
     if (user) {
         return children
     }

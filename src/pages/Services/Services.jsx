@@ -11,12 +11,12 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   });
-//   const {loading} = useContext(AuthContext)
-//   if (loading) {
-//     return <div className=" h-screen flex justify-center items-center">
-//         <Spinner className="h-12 w-12" />
-//     </div>
-// }
+  const {loading} = useContext(AuthContext)
+  if (loading) {
+    return <div className=" h-screen flex justify-center items-center">
+        <Spinner className="h-12 w-12" />
+    </div>
+}
   return (
     <div className=" mx-4 lg:mx-20">
       <Helmet>

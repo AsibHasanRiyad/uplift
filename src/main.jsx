@@ -5,13 +5,16 @@ import { RouterProvider } from "react-router-dom";
 import MainRouter from "./routes/MainRoute.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import AuthProvider from "./provider/AuthProvider";
+import { ThemeProvider } from "@material-tailwind/react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <AuthProvider>
-        <RouterProvider router={MainRouter}></RouterProvider>
-      </AuthProvider>
-    </HelmetProvider>
+    <ThemeProvider>
+      <HelmetProvider>
+        <AuthProvider>
+          <RouterProvider router={MainRouter}></RouterProvider>
+        </AuthProvider>
+      </HelmetProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

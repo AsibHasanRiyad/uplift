@@ -13,35 +13,30 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 export function Login() {
   const { loginUser, googleSignIn, gitSignIn } = useContext(AuthContext);
-  // const [error, setError] = useState('')
+  const [errorMessage, setErrorMessage] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
   const handelLogin = (e) => {
     e.preventDefault();
+    setErrorMessage('')
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
     loginUser(email, password)
-    .then((result) => console.log(result.user));
-    navigate(location?.state ? location.state : "/")
-    .catch((message) =>
-      console.log(message)
-    );
+      .then((result) => console.log(result.user))
+      navigate(location?.state ? location.state : "/")
+      .catch((message) => setErrorMessage(message.message));
     console.log(email, password);
   };
   //google sign in
   const handelGoogleSignIn = () => {
     googleSignIn().then((result) => console.log(result));
-    navigate("/").catch((error) =>
-      console.log(error)
-    );
+    navigate("/").catch((error) => console.log(error));
   };
   //git sign in
   const handelGitSignIn = () => {
     gitSignIn().then((result) => console.log(result));
-    navigate("/").catch((error) =>
-      console.log(error)
-    );
+    navigate("/").catch((error) => console.log(error));
   };
   return (
     <div className=" min-h-screen flex justify-center items-center ">
@@ -158,7 +153,7 @@ export function Login() {
             }
             containerProps={{ className: "-ml-2.5" }}
           />
-
+          <p className=" text-xs text-center text-red-500 mt-2"> {errorMessage} </p>
           <Button type="submit" className="mt-6 bg-[#3BCF92]" fullWidth>
             Login
           </Button>

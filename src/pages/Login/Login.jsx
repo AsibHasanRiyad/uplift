@@ -5,12 +5,30 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
+import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 // import { FaGoogle } from "react-icons/fa";
 
 export function Login() {
+  const {loginUser} = useContext(AuthContext)
+  const handelLogin = (e) =>{
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email')
+    const password = form.get('password')
+    loginUser(email, password)
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
+    console.log(email, password);
+    
+  }
   return (
     <div className=" min-h-screen flex justify-center items-center ">
+      <Helmet>
+        <title>Uplift | Sign In</title>
+      </Helmet>
       <Card className=" px-10 py-16" color="white" shadow={false}>
         <Typography variant="h4" color="black" className=" text-center">
           Sign In With
@@ -91,10 +109,12 @@ export function Login() {
           </div>
         </div>
         <h1 className=" text-center text-black">Or</h1>
-        <form className="mt-8 mb-2 px-4 md:px-0 w-80 max-w-screen-lg sm:w-96">
+        <form
+        onSubmit={handelLogin}
+        className="mt-8 mb-2 px-4 md:px-0 w-80 max-w-screen-lg sm:w-96">
           <div className="mb-4 flex flex-col gap-6 ">
-            <Input label="Email" />
-            <Input type="password" label="Password" />
+            <Input name="email" label="Email" />
+            <Input name="password" type="password" label="Password" />
           </div>
           <Checkbox
             label={
@@ -114,7 +134,7 @@ export function Login() {
             }
             containerProps={{ className: "-ml-2.5" }}
           />
-          <Button className="mt-6 bg-[#3BCF92]" fullWidth>
+          <Button type="submit" className="mt-6 bg-[#3BCF92]" fullWidth>
             Login
           </Button>
           <Typography color="gray" className="mt-4 text-center font-normal">

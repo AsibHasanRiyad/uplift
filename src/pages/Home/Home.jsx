@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import Slider from "../../components/Slider/Slider";
 import SwiperSlider from "../../components/Swiper/SwiperSlider";
 import Money from "../Money/Money";
@@ -7,6 +8,9 @@ import Services from "../Services/Services";
 const Home = () => {
   return (
     <div className="">
+      <Helmet>
+        <title>Uplift | Home</title>
+      </Helmet>
       <Slider></Slider>
       {/* <div
         style={{

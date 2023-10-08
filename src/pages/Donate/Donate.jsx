@@ -1,5 +1,5 @@
+/* eslint-disable no-undef */
 import React from "react";
-import { useCountries } from "use-react-countries";
 import {
   Card,
   CardHeader,
@@ -12,14 +12,13 @@ import {
   TabsBody,
   Tab,
   TabPanel,
-  Select,
-  Option,
 } from "@material-tailwind/react";
 import {
   BanknotesIcon,
   CreditCardIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/solid";
+import { Helmet } from "react-helmet-async";
  
 // function formatCardNumber(value: string) {
 //   const val = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
@@ -52,6 +51,9 @@ export default function Donate() {
  
   return (
     <div className=" flex justify-center items-center py-10">
+      <Helmet>
+        <title>Uplift | Donate</title>
+      </Helmet>
         <Card className="w-full max-w-lg mx-4 ">
       <CardHeader
         // color="gray"

@@ -5,7 +5,7 @@ const Money = () => {
   return (
     <div className=" grid grid-cols-1 md:grid-cols-2 items-center px-4 lg:px-28">
       <div>
-        <h1 className=" text-5xl text-[#3BCF92] font-body">Where the money goes?</h1>
+        <h1 className=" text-5xl text-[#17174a] font-body">Where the money goes?</h1>
         <p className=" py-4 text-base text-gray-700">
           Charity law within the UK varies among England and Wales, Scotland and
           Northern Ireland, but the fundamental principles are the same. Most

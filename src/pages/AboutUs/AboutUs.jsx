@@ -3,6 +3,7 @@ import SwiperSlider from "../../components/Swiper/SwiperSlider";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { EachCard } from "./EachCard";
 import Money from "../Money/Money";
+import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
   const [data, setData] = useState([]);
@@ -13,6 +14,9 @@ const AboutUs = () => {
   });
   return (
     <div>
+      <Helmet>
+        <title>Uplift | About Us</title>
+      </Helmet>
       <SwiperSlider></SwiperSlider>
 
       <div className=" mx-4">

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/images/logo.png";
-import css from './NavBar.css'
+import css from "./NavBar.css";
 import {
   Navbar,
   MobileNav,
@@ -10,9 +10,17 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 export default function NavBar() {
+  const { user, logOut } = useContext(AuthContext);
   const [openNav, setOpenNav] = React.useState(false);
+
+  const handelLogout = () =>{
+    logOut()
+    .then(result => console.log('kjskljdsaf', result))
+    .catch(error => console.log(error))
+  }
 
   React.useEffect(() => {
     window.addEventListener(
@@ -61,7 +69,7 @@ export default function NavBar() {
         color="white"
         className="p-1 font-normal hover:text-[#3BCF92]"
       >
-                <NavLink
+        <NavLink
           to="/services"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
@@ -77,7 +85,7 @@ export default function NavBar() {
         color="white"
         className="p-1 font-normal hover:text-[#3BCF92]"
       >
-                <NavLink
+        <NavLink
           to="/blog"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
@@ -93,7 +101,7 @@ export default function NavBar() {
         color="white"
         className="p-1 font-normal hover:text-[#3BCF92]"
       >
-                <NavLink
+        <NavLink
           to="/donate"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
@@ -117,16 +125,26 @@ export default function NavBar() {
         </Typography> */}
         <img className=" w-32" src={logo} alt="" />
         <div className="hidden lg:block">{navList}</div>
-        <NavLink to={'/login'}>
-        <Button
-        
-        variant=""
-        size=""
-        className="hidden lg:inline-block bg-[#3BCF92] px-6 py-3"
-      >
-        <span>Login</span>
-      </Button>
-        </NavLink>
+        {user ? (
+            <Button
+              onClick={handelLogout}
+              variant=""
+              size=""
+              className="hidden lg:inline-block bg-[#3BCF92] px-6 py-3"
+            >
+              <span>Log Out</span>
+            </Button>
+        ) : (
+          <NavLink to={"/login"}>
+            <Button
+              variant=""
+              size=""
+              className="hidden lg:inline-block bg-[#3BCF92] px-6 py-3"
+            >
+              <span>Login</span>
+            </Button>
+          </NavLink>
+        )}
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -168,10 +186,10 @@ export default function NavBar() {
       <MobileNav open={openNav}>
         <div className="container mx-auto">
           {navList}
-          <NavLink to={'/login'}>
-          <Button variant="" size="" fullWidth className="mb-2 bg-[#3BCF92] ">
-            <span>Login</span>
-          </Button>
+          <NavLink to={"/login"}>
+            <Button variant="" size="" fullWidth className="mb-2 bg-[#3BCF92] ">
+              <span>Login</span>
+            </Button>
           </NavLink>
         </div>
       </MobileNav>

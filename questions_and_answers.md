@@ -40,12 +40,12 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>C: "12".</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>In JavaScript, the + operator is used for both addition and string concatenation. When we use the + operator with a string and a number, JavaScript will treat it as string concatenation. Here sum function call, you're passing 1 (a number) and "2" (a string) as arguments. JavaScript will convert the number 1 to a string and then concatenate it with the string "2", resulting in the string "12". Therefore, the function will return the string "12".</i>
 
 </p>
 </details>
@@ -66,12 +66,14 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>A: ['🍕', '🍫', '🥑', '🍔'].</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here first create an array called food with four elements. Then, create an object info with a property favoriteFood that is initially assigned the first element of the food array, which is "🍕".
+
+However, after that, we change the value of info.favoriteFood to "🍝". This change only affects the info object, and it doesn't modify the original food array. So, when you log the food array to the console, it remains unchanged and will output ['🍕', '🍫', '🥑', '🍔'].</i>
 
 </p>
 </details>
@@ -91,12 +93,12 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>B: Hi there, undefined.</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here the sayHi function, there is a parameter name that is used in the template string. When you call sayHi() without passing any arguments, the name parameter is undefined because you didn't provide a value for it. As a result, the template string includes "undefined," and the function returns "Hi there, undefined."</i>
 
 </p>
 </details>
@@ -119,12 +121,15 @@ console.log(count);
 - C: 3
 - D: 4
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>C: 3</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>num = 0 (falsy) -> count remains 0
+num = 1 (truthy) -> count becomes 1
+num = 2 (truthy) -> count becomes 2
+num = 3 (truthy) -> count becomes 3</i>
 
 </p>
 </details>

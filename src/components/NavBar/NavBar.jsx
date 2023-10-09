@@ -85,7 +85,7 @@ export default function NavBar() {
           About Us
         </NavLink>
       </Typography>
-      <span className=" hidden lg:block">|</span>
+      {/* <span className=" hidden lg:block">|</span>
       <Typography
         as="li"
         variant="small"
@@ -100,7 +100,7 @@ export default function NavBar() {
         >
           Services
         </NavLink>
-      </Typography>
+      </Typography> */}
       <span className=" hidden lg:block">|</span>
       <Typography
         as="li"

@@ -83,8 +83,8 @@ const Register = () => {
           progress: undefined,
           theme: "dark",
         });
+        navigate(location?.state ? location.state : "/")
       })
-      navigate(location?.state ? location.state : "/")
       .catch((error) => setErrorMessage(error.message));
   };
   return (

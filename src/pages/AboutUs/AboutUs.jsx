@@ -113,7 +113,7 @@ const AboutUs = () => {
       </div>
 
       <div className=" m grid grid-cols-1 gap-6 my-16 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-4 md:mx-8 lg:mx-auto ">
-        {data.map((each) => (
+        {data?.map((each) => (
           <EachCard each={each} key={each.slogan}></EachCard>
         ))}
       </div>

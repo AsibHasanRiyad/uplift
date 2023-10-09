@@ -17,7 +17,7 @@ const Details = () => {
   }, []);
   const data = useLoaderData();
   const { id } = useParams();
-  const eachService = data.find((service) => service.id == id);
+  const eachService = data?.find((service) => service.id == id);
   const {
     service_name,
     description,

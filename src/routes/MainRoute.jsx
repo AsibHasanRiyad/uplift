@@ -8,7 +8,6 @@ import Services from "../pages/Services/Services";
 import Donate from "../pages/Donate/Donate";
 import Blog from "../pages/Blog/Blog";
 import PrivateRoute from "./PrivateRoute";
-import TestPage from "../pages/TestPage/TestPage";
 import Details from "../components/Detais/Details";
 import ErrorPage from "../pages/ErrorPage.jsx/ErrorPage";
 
@@ -37,10 +36,6 @@ const MainRouter = createBrowserRouter([
         {
             path:'/services',
             element: <Services></Services>,
-        },
-        {
-            path:'/test',
-            element: <TestPage></TestPage>,
         },
         {
             path:'/donate',

@@ -37,7 +37,7 @@ import { useEffect } from "react";
             {slogan}
           </Typography>
           <Typography>
-            {details.slice(0,150)}
+            {details?.slice(0,150)}
           </Typography>
         </CardBody>
       </Card>

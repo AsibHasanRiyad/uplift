@@ -24,7 +24,7 @@ const Blog = () => {
         <title>Uplift | Blog</title>
       </Helmet>
             {
-                services.map(service => <EachBlog service={service} key={service.id}></EachBlog> )
+                services?.map(service => <EachBlog service={service} key={service.id}></EachBlog> )
             }
             </div>
     </div>

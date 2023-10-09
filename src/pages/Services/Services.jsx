@@ -25,9 +25,6 @@ const Services = () => {
   }
   return (
     <div className=" mx-4 lg:mx-20">
-      <Helmet>
-        <title>Uplift | Services</title>
-      </Helmet>
       <div></div>
       <h1
         data-aos="fade-left"

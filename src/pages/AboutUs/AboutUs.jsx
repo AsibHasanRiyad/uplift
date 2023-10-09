@@ -110,8 +110,6 @@ const AboutUs = () => {
           <EachCard each={each} key={each.slogan}></EachCard>
         ))}
       </div>
-
-      <Money></Money>
     </div>
   );
 };

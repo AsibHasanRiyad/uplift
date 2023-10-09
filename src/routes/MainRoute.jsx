@@ -10,11 +10,13 @@ import Blog from "../pages/Blog/Blog";
 import PrivateRoute from "./PrivateRoute";
 import TestPage from "../pages/TestPage/TestPage";
 import Details from "../components/Detais/Details";
+import ErrorPage from "../pages/ErrorPage.jsx/ErrorPage";
 
 const MainRouter = createBrowserRouter([
   {
     path: "/",
     element: <MainPage></MainPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
         {
             path:'/',
@@ -50,7 +52,7 @@ const MainRouter = createBrowserRouter([
         },
         {
             path:'/details/:id',
-            element: <Details></Details>,
+            element: <PrivateRoute><Details></Details></PrivateRoute>,
             loader: () => fetch('/services.json')
         },
     ]

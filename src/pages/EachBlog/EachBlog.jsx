@@ -16,9 +16,9 @@ const EachBlog = ({ service }) => {
   } = service;
   return (
     <div>
-      <div className=" grid grid-cols-5 gap-5  my-10 border shadow-xl p-4 rounded-md">
+      <div className=" grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-5  my-10 border shadow-xl p-4 rounded-md">
         <div className=" col-span-2">
-          <img className="h-[50vh] rounded-md" src={image_url} alt="" />
+          <img className=" h-full w-full rounded-md" src={image_url} alt="" />
         </div>
         <div className=" col-span-3">
           <h1 className=" text-2xl  font-bold text-[#3BCF92] ">
@@ -33,7 +33,7 @@ const EachBlog = ({ service }) => {
               <FaHandHoldingHeart></FaHandHoldingHeart> {area}{" "}
             </h1>
           </div>
-          <p className=" text-base text-gray-700">
+          <p className=" text-base text-gray-700 text-justify">
             {description.slice(0, 500)}{" "}
             <span className=" text-[#3BCF92] font-body cursor-pointer">
               See Details

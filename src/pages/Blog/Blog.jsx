@@ -21,7 +21,7 @@ const Blog = () => {
  
   return (
     <div>
-        <div className="my-20 mx-20">
+        <div className="my-10 mx-4 lg:mx-20">
         <Helmet>
         <title>Uplift | Blog</title>
       </Helmet>

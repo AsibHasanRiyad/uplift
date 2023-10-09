@@ -34,7 +34,7 @@ const Details = () => {
   ];
   console.log(eachService);
   return (
-    <div className=" grid grid-cols-6 mx-20 my-10 gap-5">
+    <div className=" grid grid-cols-1 lg:grid-cols-6 mx-4 lg:mx-20 my-10 gap-0 lg:gap-5">
       <div className=" col-span-4 ">
         <div>
           <Card className="mt-6 w-full bg-transparent shadow-none">
@@ -49,7 +49,7 @@ const Details = () => {
               <Typography variant="h5" color="blue-gray" className="mb-2">
                 {service_name}
               </Typography>
-              <Typography>
+              <Typography className=" text-justify">
                 {description}
               </Typography>
             </CardBody>

@@ -12,7 +12,6 @@ import {
   TabsBody,
   Tab,
   TabPanel,
-  Spinner,
 } from "@material-tailwind/react";
 import {
   BanknotesIcon,

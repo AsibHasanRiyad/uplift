@@ -1,8 +1,6 @@
 import {
-  Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Typography,
 } from "@material-tailwind/react";
@@ -17,8 +15,6 @@ const Details = () => {
   const {
     service_name,
     description,
-    area,
-    price,
     donation_goal,
     total_donation,
     location,

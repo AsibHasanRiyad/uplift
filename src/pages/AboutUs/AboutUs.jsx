@@ -2,12 +2,17 @@ import {  useContext, useEffect, useState } from "react";
 import SwiperSlider from "../../components/Swiper/SwiperSlider";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { EachCard } from "./EachCard";
-import Money from "../Money/Money";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Spinner } from "@material-tailwind/react";
 
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 const AboutUs = () => {
+  useEffect(() =>{
+    Aos.init();
+  },[])
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch("data.json")
@@ -21,14 +26,16 @@ const AboutUs = () => {
     </div>
 }
   return (
-    <div>
+    <div className=" overflow-hidden">
       <Helmet>
         <title>Uplift | About Us</title>
       </Helmet>
-      <SwiperSlider></SwiperSlider>
+      <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000"   >
+      <SwiperSlider ></SwiperSlider>
+      </div>
 
-      <div className=" mx-4">
-        <h1 className=" text-2xl md:text-3xl xl:text-5xl text-center px-0 md:px-10 xl:px-36 font-bold text-[#17174a] py-10">
+      <div data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"   className=" mx-4">
+        <h1  className=" text-2xl md:text-3xl xl:text-5xl text-center px-0 md:px-10 xl:px-36 font-bold text-[#17174a] py-10">
           We are an Globian non-profit organization that{" "}
           <span className=" text-[#3BCF92]">supports</span> good causes and
           positive change all over the world.

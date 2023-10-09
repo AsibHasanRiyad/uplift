@@ -3,8 +3,12 @@ import Service from "./Service";
 import { Helmet } from "react-helmet-async";
 import { Spinner } from "@material-tailwind/react";
 import { AuthContext } from "../../provider/AuthProvider";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 const Services = () => {
+  useEffect(() =>{
+    Aos.init();
+  },[])
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch("services.json")
@@ -23,7 +27,7 @@ const Services = () => {
         <title>Uplift | About Us</title>
       </Helmet>
       <div></div>
-      <h1 className=" text-[#17174a] text-6xl font-extrabold text-center py-10">
+      <h1 data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"  className=" text-[#17174a] text-3xl md:text-4xl lg:text-6xl font-extrabold text-center py-10">
         Our Services{" "}
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">

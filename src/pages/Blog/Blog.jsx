@@ -1,26 +1,24 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import EachBlog from "../EachBlog/EachBlog";
 import { Helmet } from "react-helmet-async";
-import { AuthContext } from "../../provider/AuthProvider";
-import { Spinner } from "@material-tailwind/react";
+import 'aos/dist/aos.css'
+import Aos from "aos";
+
+
 
 const Blog = () => {
+  useEffect(() =>{
+    Aos.init();
+  },[])
     const [services, setServices] = useState([]);
     useEffect(() =>{
         fetch('services.json')
         .then(res => res.json())
         .then(data => setServices(data))
     })
-
-  //   const {loading} = useContext(AuthContext)
-  //   if (loading) {
-  //     return <div className=" h-screen flex justify-center items-center">
-  //         <Spinner className="h-12 w-12" />
-  //     </div>
-  // }
  
   return (
-    <div>
+    <div data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"   >
         <div className="my-10 mx-4 lg:mx-20">
         <Helmet>
         <title>Uplift | Blog</title>

@@ -2,15 +2,21 @@
 import {
     Card,
     CardBody,
-    CardFooter,
     Typography,
-    Button,
   } from "@material-tailwind/react";
    
+  import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
+
   export function EachCard({each}) {
+    useEffect(() =>{
+      Aos.init();
+    },[])
     const {slogan, details} = each
     return (
-      <Card className="mt-6">
+      <Card data-aos="fade-down" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"    className="mt-6">
         <CardBody>
           <div className=" flex justify-center items-center">
           <svg

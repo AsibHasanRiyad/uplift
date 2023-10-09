@@ -5,14 +5,19 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Button,
   Progress,
 } from "@material-tailwind/react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Service = ({ service }) => {
+  useEffect(() =>{
+    Aos.init();
+  },[])
   const {
     service_name,
     description,
@@ -20,12 +25,11 @@ const Service = ({ service }) => {
     price,
     donation_goal,
     total_donation,
-    palce_name,
     image_url,
     id
   } = service;
   return (
-    <div>
+    <div data-aos="fade-down" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"  >
       <Card className="mt-6 ">
         <CardHeader color="blue-gray" className="relative h-56">
           <img className=" w-full h-full" src={image_url} alt="card-image" />

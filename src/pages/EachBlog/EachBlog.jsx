@@ -1,9 +1,16 @@
 /* eslint-disable react/prop-types */
 import { Progress } from "@material-tailwind/react";
-import React from "react";
 import { FaDollarSign, FaHandHoldingHeart } from "react-icons/fa";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
+
 
 const EachBlog = ({ service }) => {
+  useEffect(() =>{
+    Aos.init();
+  },[])
   const {
     service_name,
     description,
@@ -11,11 +18,10 @@ const EachBlog = ({ service }) => {
     price,
     donation_goal,
     total_donation,
-    palce_name,
     image_url,
   } = service;
   return (
-    <div>
+    <div data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"   >
       <div className=" grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-5  my-10 border shadow-xl p-4 rounded-md">
         <div className=" col-span-2">
           <img className=" h-full w-full rounded-md" src={image_url} alt="" />

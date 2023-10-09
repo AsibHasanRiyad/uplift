@@ -1,20 +1,32 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link sizes="32x32" rel="icon" type="image/svg+xml" href="./src/assets/images/favicon.png" />
+    <link
+      sizes="32x32"
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/images/favicon.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uplift</title>
+    <!-- aos animation -->
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;800&display=swap');
-      body{
-        font-family: 'Source Sans 3', sans-serif;
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Source Sans 3", sans-serif;
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- aos javascript -->
+    <script src="bower_components/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

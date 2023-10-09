@@ -1,24 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import "./style.css";
 
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function SwiperSlider() {
-  // const [data, setData] = useState([]);
-  // useEffect(() =>{
-  //     fetch('services.json')
-  //     .then(res => res.json())
-  //     .then(data => setData(data))
-  // })
+
   return (
     <>
       <Swiper

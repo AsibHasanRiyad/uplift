@@ -9,6 +9,7 @@ import Donate from "../pages/Donate/Donate";
 import Blog from "../pages/Blog/Blog";
 import PrivateRoute from "./PrivateRoute";
 import TestPage from "../pages/TestPage/TestPage";
+import Details from "../components/Detais/Details";
 
 const MainRouter = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const MainRouter = createBrowserRouter([
         {
             path:'/blog',
             element: <PrivateRoute><Blog></Blog></PrivateRoute>
+        },
+        {
+            path:'/details/:id',
+            element: <Details></Details>,
+            loader: () => fetch('/services.json')
         },
     ]
   },

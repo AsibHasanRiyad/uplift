@@ -1,6 +1,6 @@
  [
       {
-        "service_id": 1,
+        "id": 1,
         "service_name": "Food Distribution",
         "price": 50,
         "area": "Hunger Relief",
@@ -11,7 +11,7 @@
         "total_donation": 7500
       },
       {
-        "service_id": 2,
+        "id": 2,
         "service_name": "Educational Support",
         "price": 40,
         "area": "Education",
@@ -22,7 +22,7 @@
         "total_donation": 3500
       },
       {
-        "service_id": 3,
+        "id": 3,
         "service_name": "Medical Assistance",
         "price": 60,
         "area": "Healthcare",
@@ -33,7 +33,7 @@
         "total_donation": 6000
       },
       {
-        "service_id": 4,
+        "id": 4,
         "service_name": "Shelter for the Homeless",
         "price": 70,
         "area": "Housing",
@@ -45,7 +45,7 @@
       },
 
       {
-        "service_id": 5,
+        "id": 5,
         "service_name": "Clean Water Access",
         "price": 35,
         "area": "Water and Sanitation",
@@ -56,7 +56,7 @@
         "total_donation": 7800
       },
       {
-        "service_id": 6,
+        "id": 6,
         "service_name": "Children's Healthcare",
         "price": 55,
         "area": "Healthcare",

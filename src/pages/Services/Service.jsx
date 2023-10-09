@@ -10,6 +10,7 @@ import {
   Button,
   Progress,
 } from "@material-tailwind/react";
+import { Link, Navigate } from "react-router-dom";
 
 const Service = ({ service }) => {
   const {
@@ -21,6 +22,7 @@ const Service = ({ service }) => {
     total_donation,
     palce_name,
     image_url,
+    id
   } = service;
   return (
     <div>
@@ -38,10 +40,10 @@ const Service = ({ service }) => {
               <FaHandHoldingHeart></FaHandHoldingHeart> {area}{" "}
             </h1>
           </div>
-          <Typography variant="h5" color="blue-gray" className="mb-2 text-[#3BCF92] text-2xl font-bold">
+          <Typography variant="h5" color="blue-gray" className="mb-2 text-[#17174a] text-2xl font-bold">
             {service_name}
           </Typography>
-          <Typography>{description.slice(0, 200)} <span className=" text-[#3BCF92] font-bold">See More ...</span></Typography>
+          <Typography>{description.slice(0, 200)} <span className=" text-[#3BCF92] font-bold cursor-pointer underline"> <Link to={`/details/${id}`}>See More ... </Link> </span> </Typography>
           <div className="flex h-full rounded-full flex-col gap-4 mt-2">
             <Progress
               value={((total_donation / donation_goal) * 100).toFixed(2)}

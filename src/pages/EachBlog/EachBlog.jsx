@@ -27,7 +27,7 @@ const EachBlog = ({ service }) => {
           <img className=" h-full w-full rounded-md" src={image_url} alt="" />
         </div>
         <div className=" col-span-3">
-          <h1 className=" text-2xl  font-bold text-[#3BCF92] ">
+          <h1 className=" text-xl mt-2 md:text-2xl  font-bold text-[#3BCF92] ">
             {service_name}
           </h1>
           <div className=" flex justify-between my-4">

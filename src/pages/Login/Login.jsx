@@ -23,8 +23,8 @@ export function Login() {
     const email = form.get("email");
     const password = form.get("password");
     loginUser(email, password)
-      .then((result) => console.log(result.user))
-      navigate(location?.state ? location.state : "/")
+      .then((result) =>{ console.log(result.user)
+      navigate(location?.state ? location.state : "/" )})
       .catch((message) => setErrorMessage(message.message));
     console.log(email, password);
   };

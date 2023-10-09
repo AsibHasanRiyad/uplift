@@ -40,10 +40,7 @@ const EachBlog = ({ service }) => {
             </h1>
           </div>
           <p className=" text-base text-gray-700 text-justify">
-            {description.slice(0, 500)}{" "}
-            <span className=" text-[#3BCF92] font-body cursor-pointer">
-              See Details
-            </span>
+            {description}{" "}
           </p>
           <p className=" mt-2 text-2xl text-gray-700">
             <span className=" text-[#3BCF92] font-body cursor-pointer">

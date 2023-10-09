@@ -24,7 +24,19 @@ const Register = () => {
 
   //google sign in
   const handelGoogleSignIn = () => {
-    googleSignIn().then((result) => console.log(result));
+    googleSignIn().then((result) =>{
+      toast.success('Login Successful', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+        console.log(result)
+    } );
     navigate("/").catch((error) => console.log(error));
   };
 
@@ -60,7 +72,7 @@ const Register = () => {
           displayName: firstName,
           photoURL:photoUrl
         });
-        toast('Registration Successful', {
+        toast.success('Registration Successful', {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -68,10 +80,9 @@ const Register = () => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
           });
-        // navigate(location?.state ? location.state : "/")
-        setSuccessMessage("Registration success, please go to login pa");
+        navigate(location?.state ? location.state : "/")
       })
       .catch((error) => setErrorMessage(error.message));
   };

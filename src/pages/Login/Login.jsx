@@ -10,7 +10,7 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from 'react-toastify';
 // import { FaGoogle } from "react-icons/fa";
 
 export function Login() {
@@ -26,7 +26,7 @@ export function Login() {
     const password = form.get("password");
     loginUser(email, password)
       .then((result) =>{ console.log(result.user)
-        toast('Registration Successful', {
+        toast.success('Login Successful', {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -34,7 +34,7 @@ export function Login() {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
           });
       
       navigate(location?.state ? location.state : "/" )})
@@ -43,30 +43,40 @@ export function Login() {
   };
   //google sign in
   const handelGoogleSignIn = () => {
-    googleSignIn().then((result) => console.log(result));
+    googleSignIn().then((result) =>{
+      toast.success('Login Successful', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      console.log(result)
+    } );
     navigate("/").catch((error) => console.log(error));
   };
   //git sign in
   const handelGitSignIn = () => {
-    gitSignIn().then((result) => console.log(result));
+    gitSignIn().then((result) =>{
+      toast.success('Login Successful', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      console.log(result) 
+    });
     navigate("/").catch((error) => console.log(error));
   };
   return (
     <div className=" min-h-screen flex justify-center items-center ">
-            <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-      {/* Same as */}
-      <ToastContainer />
       <Helmet>
         <title>Uplift | Sign In</title>
       </Helmet>

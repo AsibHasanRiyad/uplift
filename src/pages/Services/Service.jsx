@@ -32,7 +32,7 @@ const Service = ({ service }) => {
     <div data-aos="fade-down" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"  >
       <Card className="mt-6 ">
         <CardHeader color="blue-gray" className="relative h-56">
-          <img className=" w-full h-full" src={image_url} alt="card-image" />
+          <img data-aos="zoom-out" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"   className=" w-full h-full" src={image_url} alt="card-image" />
         </CardHeader>
         <CardBody>
         <div className=" flex justify-between mb-4">

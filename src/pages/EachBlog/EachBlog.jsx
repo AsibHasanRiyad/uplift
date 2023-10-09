@@ -24,7 +24,7 @@ const EachBlog = ({ service }) => {
     <div data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"   >
       <div className=" grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-5  my-10 border shadow-xl p-4 rounded-md">
         <div className=" col-span-2">
-          <img className=" h-full w-full rounded-md" src={image_url} alt="" />
+          <img data-aos="zoom-out-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"    className=" h-full w-full rounded-md" src={image_url} alt="" />
         </div>
         <div className=" col-span-3">
           <h1 className=" text-xl mt-2 md:text-2xl  font-bold text-[#3BCF92] ">

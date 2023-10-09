@@ -3,7 +3,7 @@ hello
 # Uplift
 
 
-![Logo](https://i.ibb.co/p3JZKZY/logo.png)
+![Logo](https://i.ibb.co/5vMSb75/uplift-high-resolution-logo-color-on-transparent-background.png)
 
 
 ## Live Link

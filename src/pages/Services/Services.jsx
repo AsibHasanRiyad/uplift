@@ -26,7 +26,7 @@ const Services = () => {
   return (
     <div className=" mx-4 lg:mx-20">
       <Helmet>
-        <title>Uplift | About Us</title>
+        <title>Uplift | Services</title>
       </Helmet>
       <div></div>
       <h1

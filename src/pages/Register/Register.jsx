@@ -1,5 +1,5 @@
 /* eslint-disable no-constant-condition */
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import {
   Card,
   Input,
@@ -24,20 +24,21 @@ const Register = () => {
 
   //google sign in
   const handelGoogleSignIn = () => {
-    googleSignIn().then((result) =>{
-      toast.success('Login Successful', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+    googleSignIn()
+      .then((result) => {
+        toast.success("Login Successful", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
         });
-        console.log(result)
-    } );
-    navigate("/").catch((error) => console.log(error));
+      });
+      navigate(location?.state ? location.state : "/")
+      .catch((error) => console.log(error));
   };
 
   const handelRegister = (e) => {
@@ -70,9 +71,9 @@ const Register = () => {
       .then((result) => {
         updateProfile(result.user, {
           displayName: firstName,
-          photoURL:photoUrl
+          photoURL: photoUrl,
         });
-        toast.success('Registration Successful', {
+        toast.success("Registration Successful", {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -81,9 +82,9 @@ const Register = () => {
           draggable: true,
           progress: undefined,
           theme: "dark",
-          });
-        navigate(location?.state ? location.state : "/")
+        });
       })
+      navigate(location?.state ? location.state : "/")
       .catch((error) => setErrorMessage(error.message));
   };
   return (
@@ -105,7 +106,13 @@ const Register = () => {
       <Helmet>
         <title>Uplift | Register</title>
       </Helmet>
-      <div data-aos="zoom-out" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"    className=" min-h-screen flex justify-center items-center ">
+      <div
+        data-aos="zoom-out"
+        data-aos-offset="100"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="600"
+        className=" min-h-screen flex justify-center items-center "
+      >
         <Card
           className=" px-10 py-16 rounded-none md:rounded-md"
           color="white"
@@ -202,18 +209,18 @@ const Register = () => {
                   className=" col-span-1 rounded-lg"
                   label="First Name"
                   required
-                  placeholder='First Name'
+                  placeholder="First Name"
                 />
                 <input
                   name="lastName"
                   type="text"
                   className=" col-span-1 rounded-lg"
                   label="Last Name"
-                  placeholder='Last Name'
+                  placeholder="Last Name"
                   required
                 />
               </div>
-              <Input className='' name="photo" label="Photo URL" required />
+              <Input className="" name="photo" label="Photo URL" required />
               <Input name="email" type="email" label="Email" />
               <Input name="password" type="password" label="Password" />
             </div>

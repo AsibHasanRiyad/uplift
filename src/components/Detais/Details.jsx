@@ -9,6 +9,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Details = () => {
   useEffect(() => {
@@ -42,6 +43,9 @@ const Details = () => {
       data-aos-duration="600"
       className=" grid grid-cols-1 lg:grid-cols-6 mx-4 lg:mx-20 my-10 gap-0 lg:gap-5"
     >
+      <Helmet>
+        <title>Uplift | Details</title>
+      </Helmet>
       <div className=" col-span-4 ">
         <div>
           <Card className="mt-6 w-full bg-transparent shadow-none">

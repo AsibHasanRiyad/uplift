@@ -64,7 +64,7 @@ const Service = ({ service }) => {
           >
             {service_name}
           </Typography>
-          <Typography>{description.slice(0, 200)} <span className=" text-justify text-[#3BCF92] font-bold cursor-pointer underline"> <Link to={`/details/${id}`}>See More ... </Link> </span> </Typography>
+          <Typography>{description.slice(0, 200)} <button className=" text-justify text-white rounded font-bold cursor-pointer  p-0.5  bg-[#3BCF92]"> <Link to={`/details/${id}`}>See More ... </Link> </button> </Typography>
           <div className="flex h-full rounded-full flex-col gap-4 mt-2">
             <Progress
               value={((total_donation / donation_goal) * 100).toFixed(2)}

@@ -1,4 +1,4 @@
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import {
   Card,
   Input,
@@ -10,7 +10,7 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 // import { FaGoogle } from "react-icons/fa";
 
 export function Login() {
@@ -20,13 +20,14 @@ export function Login() {
   const navigate = useNavigate();
   const handelLogin = (e) => {
     e.preventDefault();
-    setErrorMessage('')
+    setErrorMessage("");
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
     loginUser(email, password)
-      .then((result) =>{ console.log(result.user)
-        toast.success('Login Successful', {
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Login Successful", {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -35,16 +36,17 @@ export function Login() {
           draggable: true,
           progress: undefined,
           theme: "dark",
-          });
-      
-      navigate(location?.state ? location.state : "/" )})
+        });
+
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((message) => setErrorMessage(message.message));
     console.log(email, password);
   };
   //google sign in
   const handelGoogleSignIn = () => {
-    googleSignIn().then((result) =>{
-      toast.success('Login Successful', {
+    googleSignIn().then((result) => {
+      toast.success("Login Successful", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -53,15 +55,17 @@ export function Login() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
-      console.log(result)
-    } );
-    navigate("/").catch((error) => console.log(error));
+      });
+      console.log(result);
+    });
+    navigate(location?.state ? location.state : "/")
+      .catch((error) => console.log(error))
   };
   //git sign in
   const handelGitSignIn = () => {
-    gitSignIn().then((result) =>{
-      toast.success('Login Successful', {
+    gitSignIn()
+    .then((result) => {
+      toast.success("Login Successful", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -70,13 +74,22 @@ export function Login() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
-      console.log(result) 
+      });
+      console.log(result);
     });
-    navigate("/").catch((error) => console.log(error));
+    navigate(location?.state ? location.state : "/")
+    .catch((error) =>
+      console.log(error)
+    );
   };
   return (
-    <div data-aos="zoom-out" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"    className=" min-h-screen flex justify-center items-center ">
+    <div
+      data-aos="zoom-out"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="600"
+      className=" min-h-screen flex justify-center items-center "
+    >
       <Helmet>
         <title>Uplift | Sign In</title>
       </Helmet>
@@ -190,7 +203,10 @@ export function Login() {
             }
             containerProps={{ className: "-ml-2.5" }}
           />
-          <p className=" text-xs text-center text-red-500 mt-2"> {errorMessage} </p>
+          <p className=" text-xs text-center text-red-500 mt-2">
+            {" "}
+            {errorMessage}{" "}
+          </p>
           <Button type="submit" className="mt-6 bg-[#3BCF92]" fullWidth>
             Login
           </Button>

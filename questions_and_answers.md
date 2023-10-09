@@ -15,10 +15,10 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>B: ReferenceError: greetign is not defined.</b></summary>
 <p>
 
-#### Answer:  B: ReferenceError: greetign is not defined.
+#### Answer:
 
 <i> Here variable is greeting but then attempted to assign an empty object to a variable called greetign, which is a typo and not declared anywhere. As a result, when we try to log greetign, JavaScript will throw a ReferenceError because greetign is not defined in your code. </i>
 

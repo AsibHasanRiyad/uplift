@@ -2,8 +2,6 @@ hello
 
 # Uplift
 
-A brief description of what this project does and who it's for
-
 
 ![Logo](https://i.ibb.co/41LtC8f/uplift-high-resolution-color-logo.png)
 

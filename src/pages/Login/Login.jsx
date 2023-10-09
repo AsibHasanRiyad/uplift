@@ -76,7 +76,7 @@ export function Login() {
     navigate("/").catch((error) => console.log(error));
   };
   return (
-    <div className=" min-h-screen flex justify-center items-center ">
+    <div data-aos="zoom-out" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"    className=" min-h-screen flex justify-center items-center ">
       <Helmet>
         <title>Uplift | Sign In</title>
       </Helmet>

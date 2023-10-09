@@ -105,7 +105,7 @@ const Register = () => {
       <Helmet>
         <title>Uplift | Register</title>
       </Helmet>
-      <div className=" min-h-screen flex justify-center items-center ">
+      <div data-aos="zoom-out" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600"    className=" min-h-screen flex justify-center items-center ">
         <Card
           className=" px-10 py-16 rounded-none md:rounded-md"
           color="white"

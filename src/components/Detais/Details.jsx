@@ -6,18 +6,14 @@ import {
 } from "@material-tailwind/react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaLocationArrow } from "react-icons/fa";
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
 
-
-
-
-
 const Details = () => {
-  useEffect(() =>{
+  useEffect(() => {
     Aos.init();
-  },[])
+  }, []);
   const data = useLoaderData();
   const { id } = useParams();
   const eachService = data.find((service) => service.id == id);
@@ -39,7 +35,13 @@ const Details = () => {
   ];
   console.log(eachService);
   return (
-    <div data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"    className=" grid grid-cols-1 lg:grid-cols-6 mx-4 lg:mx-20 my-10 gap-0 lg:gap-5">
+    <div
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="600"
+      className=" grid grid-cols-1 lg:grid-cols-6 mx-4 lg:mx-20 my-10 gap-0 lg:gap-5"
+    >
       <div className=" col-span-4 ">
         <div>
           <Card className="mt-6 w-full bg-transparent shadow-none">
@@ -60,7 +62,13 @@ const Details = () => {
         </div>
       </div>
       <div className=" col-span-2">
-        <Card data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"     className=" w-full overflow-scroll rounded">
+        <Card
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+          className=" w-full overflow-scroll rounded"
+        >
           <table className="w-full min-w-max table-auto text-left">
             <thead>
               <tr>
@@ -125,7 +133,13 @@ const Details = () => {
 
         {/* comment */}
 
-        <form data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"     className=" mt-6">
+        <form
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+          className=" mt-6"
+        >
           <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
             <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
               <label className="sr-only">Your comment</label>

@@ -14,7 +14,7 @@ export default function Slider() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-2xl md:text-4xl lg:text-5xl"
             >
               Childhood is for dreams, not labor seams.
             </Typography>
@@ -44,7 +44,7 @@ export default function Slider() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-2xl md:text-4xl lg:text-5xl"
             >
               End Hunger, Feed Hope
             </Typography>
@@ -74,7 +74,7 @@ export default function Slider() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-2xl md:text-4xl lg:text-5xl"
             >
               Donations, big or small, change lives and unite hearts.
             </Typography>

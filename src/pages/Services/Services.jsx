@@ -38,7 +38,7 @@ const Services = () => {
       >
         Our Services{" "}
       </h1>
-      <p className=" text-center pb-6 text-xl text-gray-700">
+      <p className=" text-justify md:text-center pt-6   pb-10 text-xl text-gray-700">
         The Charity Foundation Uplift Services offers essential support such as
         food aid, shelter, healthcare, education, and more to help individuals
         and communities in need. Their mission is to uplift lives and promote

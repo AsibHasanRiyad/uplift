@@ -1,6 +1,6 @@
 [
   {
-    " id": 1,
+    "id": 1,
     "service_name": "Food Distribution",
     "price": 50,
     "area": "Hunger",
@@ -11,7 +11,7 @@
     "total_donation": 7500
   },
   {
-    " id": 2,
+    "id": 2,
     "service_name": "Educational Support",
     "price": 40,
     "area": "Education",
@@ -22,7 +22,7 @@
     "total_donation": 3500
   },
   {
-    " id": 3,
+    "id": 3,
     "service_name": "Medical Assistance",
     "price": 60,
     "area": "Healthcare",
@@ -33,8 +33,8 @@
     "total_donation": 6000
   },
   {
-    " id": 4,
-    "service_name": "Shelter for the Homeless",
+    "id": 4,
+    "service_name": "Shelter for Homeless",
     "price": 70,
     "area": "Housing",
     "location": "Shelters in Europe",
@@ -44,7 +44,7 @@
     "total_donation": 4500
   },
   {
-    " id": 5,
+    "id": 5,
     "service_name": "Disaster Relief",
     "price": 45,
     "area": "Emergency",
@@ -55,8 +55,8 @@
     "total_donation": 5500
   },
   {
-    " id": 6,
-    "service_name": "Clean Water Access",
+    "id": 6,
+    "service_name": "Clean Water ",
     "price": 35,
     "area": "Water",
     "location": "Rural Villages in Central America",
@@ -66,7 +66,7 @@
     "total_donation": 7800
   },
   {
-    " id": 7,
+    "id": 7,
     "service_name": "Empowerment Workshops",
     "price": 25,
     "area": " Development",
@@ -77,7 +77,7 @@
     "total_donation": 3500
   },
   {
-    " id": 8,
+    "id": 8,
     "service_name": "Children's Healthcare",
     "price": 55,
     "area": "Healthcare",
@@ -88,8 +88,8 @@
     "total_donation": 6200
   },
   {
-    " id": 9,
-    "service_name": "Environmental Conservation",
+    "id": 9,
+    "service_name": "Environmental",
     "price": 30,
     "area": "Environment",
     "location": "Conservation Areas Worldwide",
@@ -99,8 +99,8 @@
     "total_donation": 8000
   },
   {
-    " id": 10,
-    "service_name": "Elderly Care Services",
+    "id": 10,
+    "service_name": "Elderly Care",
     "price": 50,
     "area": "Senior Care",
     "location": "Elderly Homes in North America",
